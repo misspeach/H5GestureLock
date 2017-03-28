@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>手势密码</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #header{
+            background-color: #33a3dc;
+            height: 60px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+        #header div{
+            padding: 20px 20px;
+        }
+        #sub{
+            margin: 0 auto;
+            width: 30px;
+            height: 30px;
+            padding-top: 10px;
+        }
+        #hint{
+            height: 50px;
+            padding: 10px;
+        }
+        #hint div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #main{
+            margin: 0 auto;
+            width: 300px;
+            height: 300px;
+        }
+        #ops{
+            margin: 10px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #ops div{
+            padding: 10px 10px;
+        }
+        #ops label{
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+<div id="header">
+    <div>手势密码</div>
+</div>
+<div id="sub">
+    <canvas id="drawing1" width="30" height="30">
+    </canvas>
+</div>
+<div id="hint"><div>请输入手势密码</div></div>
+<div id="main">
+    <canvas id="drawing2" width="300" height="300">
+    </canvas>
+</div>
+<div id="ops">
+    <div>
+        <input type="radio" name="op" id="setting" value="setting" checked/><label for="setting">设置密码</label>
+    </div>
+    <div >
+        <input type="radio" name="op" id="validate" value="validate"/><label for="validate">验证密码</label>
+    </div>
+</div>
+
+<script src="gesture.js">
+</script>
+</body>
+</html>
